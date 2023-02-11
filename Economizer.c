@@ -1,4 +1,4 @@
-//     Este programa é destinado apenas aos locais que se enquadram em na categoria "residencial"
+//     Este programa é destinado apenas aos locais que se enquadram em na categoria "residencial" e que se localizam no estado de Minas Gerais
 
 //    Este programa será voltado para a análise da conta de água do usuário(ainda apenas um protótipo)
 //   como seu objetivo principal, mas um auxiliador de como diminuir a conta de água como um
@@ -35,7 +35,7 @@ float calculateCost(float totalCubicMeters, float ranges[], float prices[], int 
 
 int main() {
     float totalCubicMeters;
-    printf("Bem vindo ao EcoWater\n " );
+    printf("Bem vindo ao Economizer\n " );
     printf("Digite a quantidade de metros cúbicos que você deseja analisar: ");
     scanf("%f", &totalCubicMeters);
 
@@ -50,14 +50,14 @@ int main() {
 
 
     float ranges1[] = {5, 5, 5, 5, 20, 10000};
-    float prices1[] = {1.82, 3.886, 6.023, 8.222, 10.458, 12.759};
+    float prices1[] = {2.11, 4.496, 6.968, 9.512, 12.099, 14.761};
     int size1 = sizeof(ranges1)/sizeof(ranges1[0]);
     float cost1 = calculateCost(totalCubicMeters, ranges1, prices1, size1);
     float ranges2[] = {5, 5, 5, 5, 20, 10000};
-    float prices2[] = {1.35, 2.876, 4.457, 6.084, 7.739, 9.441};
+    float prices2[] = {1.56, 3.327, 5.156, 7.039, 8.953, 10.922};
     int size2 = sizeof(ranges2)/sizeof(ranges2[0]);
     float cost2 = calculateCost(totalCubicMeters, ranges2, prices2, size2);
-    cost2 += 30.64;
+    cost2 += 35.44;
     printf(" \n O custo total de %.2f metros cúbicos é R$ %.2f\n ", totalCubicMeters, cost1 + cost2);
 printf (" (Esse valor é baseado no sistema de custos e valores ");
 printf ("pré-definidos no ano de 2022 pela COPASA - Companhia de Saneamento de Minas Gerais) \n \n");
@@ -132,3 +132,4 @@ printf("Digite aquela atitude na qual gostaria de ver melhores informações:\n 
 
     }
 }
+
